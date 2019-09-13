@@ -3,30 +3,26 @@ import styled from "styled-components";
 
 const DivCharacter = styled.div`
   transition: transform 0.2s ease-in;
-  border:1px solid black;
+  border:1px dashed yellow;
   color: black;
-  width: 200px;
-  max-height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  width: 600px;
+  max-height: 600px;
+  margin: 10px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-evenly;
+//   margin-bottom: 10px;
   cursor: pointer;
   box-shadow: 0px 1px 6px -2px grey;
 
   &:hover {
     transform: translateY(-5px) scale(1.05);
+    background:gold;
+    color:black;
+    border:1px dashed black;
   }
 `;
-
-const CharIMage = styled.img`
-    width: 200px;
-    height: 200px;
-    object-fit: scale;
-    flex-shrink: 2;
-`;
-
 
 export const CharacterCard = props => {
     
