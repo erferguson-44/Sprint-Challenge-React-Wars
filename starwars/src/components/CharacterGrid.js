@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import styled from "styled-components"
 
-import CharacterCard from './CharacterCard';
+import { CharacterCard } from './CharacterCard';
 
 export default function CharacterGrid(){
     const [characters, setCharacters] = useState([]);
@@ -9,12 +10,12 @@ export default function CharacterGrid(){
 
     useEffect(() => {
         axios
-        .get(`https://swapi.co/api/people/:id/`)
+        .get(`https://swapi.co/api/people/`)
 
         .then(response => {
-            const rw = response.data;
-            console.log(rw);
-            setCharacters(rw);
+            const characters = response.data.results;
+            console.log(characters);
+            setCharacters(characters);
         })
 
         .catch(error => {
@@ -23,6 +24,15 @@ export default function CharacterGrid(){
     },[]);
 
     return(
-
-    );
-}
+        <div className="container">
+            {characters.map(character => {
+            return ( <CharacterCard 
+                name={character.name}
+                height={character.height}
+                hair_color={character.hair_color}
+                skin_color={character.skin_color}/>
+                );;
+            })}
+        </div>
+    )
+};
