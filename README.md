@@ -30,7 +30,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What does it mean to _think_ in react?
 
-- For me, "think" in React means that prior to building the app one must plan, map out and know when to adjust the plan while. This ensures that the structure and the scafolding for the components know how they fit into the bigger picture.
+- For me, "think" in React means that prior to building the app one must plan, map out and know when to adjust the plan while. This ensures that the structure and the scaffolding for the components so they know how to fit into the bigger picture.
 
 - [ ] Describe state.
 
